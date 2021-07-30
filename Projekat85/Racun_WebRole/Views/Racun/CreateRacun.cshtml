@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form action="~/Racun/CreateRacunKlik" method="post">
+        <h1>Kreiranje racuna</h1><br />
+
+        <label for="RowKey">Id:</label><br />
+        <input type="text" name="RowKey" /><br />
+
+        <label for="CenaRacuna">Cena na racunu:</label><br />
+        <input type="number" name="CenaRacuna" /><br />
+
+        <label for="BrojProizvodaNaRacunu">Broj proizvoda na racunu:</label><br />
+        <input type="number" name="BrojProizvodaNaRacunu" /><br />
+
+
+        <input type="submit" value="Kreiraj" />
+
+    </form>
+    <br />
+
+
+    <a href="~/Racun/ReadRacun">Nazad</a>
+
+</body>
+</html>

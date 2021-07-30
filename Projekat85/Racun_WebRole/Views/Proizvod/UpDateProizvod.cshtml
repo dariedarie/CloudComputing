@@ -1,0 +1,33 @@
+﻿@using KlaseService_Data
+@model KlaseService_Data.Proizvod
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form action="~/Proizvod/UpDateProizvodKlik" method="post">
+        <input type="hidden" name="id" value="@Model.RowKey" />
+
+        <h1>Modifikacija proizvoda</h1><br />
+        <label for="nazivProizvoda">Naziv proizvoda:</label><br />
+        <input type="text" name="nazivProizvoda" value="@Model.NazivProizvoda" /><br />
+
+        <label for="cenaProizvoda">Cena proizvoda:</label><br />
+        <input type="number" name="cenaProizvoda" value="@Model.CenaProizvoda" /><br />
+
+        <input type="submit" value="Izmeni" />
+
+    </form>
+    <br />
+
+    <a href="~/Proizvod/ReadProizvod">Nazad</a>
+
+</body>
+</html>

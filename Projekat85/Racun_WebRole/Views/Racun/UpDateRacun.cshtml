@@ -1,0 +1,34 @@
+﻿@using KlaseService_Data
+@model KlaseService_Data.Racun
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form action="~/Racun/UpdateRacunKlik" method="post">
+        <input type="hidden" name="id" value="@Model.RowKey" />
+
+        <h1>Modifikacija racuna</h1><br />
+        <label for="cenaRacuna">Cena na racunu:</label><br />
+        <input type="number" name="cenaRacuna" value="@Model.CenaRacuna" /><br />
+
+        <label for="brojProizvodaNaRacunu">Broj proizvoda na racunu:</label><br />
+        <input type="number" name="brojProizvodaNaRacunu" value="@Model.BrojProizvodaNaRacunu" /><br />
+
+        <input type="submit" value="Izmeni" />
+
+    </form>
+    <br />
+
+    <a href="~/Racun/ReadRacun">Nazad</a>
+
+
+</body>
+</html>

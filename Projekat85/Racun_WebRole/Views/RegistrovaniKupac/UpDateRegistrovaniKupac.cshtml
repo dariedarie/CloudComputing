@@ -1,0 +1,35 @@
+﻿@using KlaseService_Data
+@model KlaseService_Data.RegistrovaniKupac
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form action="~/RegistrovaniKupac/UpDateRegistrovaniKupacKlik" method="post">
+        <input type="hidden" name="id" value="@Model.RowKey" />
+
+        <h1>Modifikacija kupca</h1><br />
+        <label for="popustPrikupovini">Cena na racunu:</label><br />
+        <input type="number" step="any" name="popustPrikupovini" value="@Model.PopustPriKupovini" /><br />
+
+        <label for="nazivKupca">Broj proizvoda na racunu:</label><br />
+        <input type="text" name="nazivKupca" value="@Model.NazivKupca" /><br />
+
+        <label for="prezimeKupca">Broj proizvoda na racunu:</label><br />
+        <input type="text" name="prezimeKupca" value="@Model.PrezimeKupca" /><br />
+
+        <input type="submit" value="Izmeni" />
+
+    </form>
+    <br />
+
+    <a href="~/RegistrovaniKupac/ReadRegistrovaniKupac">Nazad</a>
+</body>
+</html>

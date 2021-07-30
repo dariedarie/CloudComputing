@@ -1,0 +1,46 @@
+﻿@using KlaseService_Data
+@model IEnumerable<KlaseService_Data.Racun>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h3>Lista svih racuna</h3>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Cena na racunu</th>
+            <th>Broj kupljenih proizvoda</th>
+        </tr>
+
+        @foreach (var racun in Model)
+        {
+
+
+            <tr>
+                <td>@racun.RowKey</td>
+                <td>@racun.CenaRacuna</td>
+                <td>@racun.BrojProizvodaNaRacunu</td>
+                <td><a href="~/Racun/DeleteRacun?RowKey=@racun.RowKey">Obrisi</a></td>
+                <td><a href="~/Racun/UpDateRacun?id=@racun.RowKey">Izmeni</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+
+
+    <a href="~/Racun/CreateRacun">Kreiraj racun</a><br />
+    <a href="~/Home/Index">Nazad na pocetak</a>
+
+
+
+
+</body>
+</html>

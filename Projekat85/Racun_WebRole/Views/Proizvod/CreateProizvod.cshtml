@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+
+    <form action="~/Proizvod/CreateProizvodKlik" method="post">
+        <h1>Kreiranje proizvoda</h1><br />
+
+        <label for="RowKey">Id:</label><br />
+        <input type="text" name="RowKey" /><br />
+
+        <label for="nazivProizvoda">Naziv proizvoda:</label><br />
+        <input type="text" name="nazivProizvoda" /><br />
+
+        <label for="cenaProizvoda">Cena proizvoda:</label><br />
+        <input type="number" name="cenaProizvoda" /><br />
+
+
+        <input type="submit" value="Kreiraj" />
+
+    </form>
+    <br />
+
+
+    <a href="~/Proizvod/ReadProizvod">Nazad</a>
+
+</body>
+</html>

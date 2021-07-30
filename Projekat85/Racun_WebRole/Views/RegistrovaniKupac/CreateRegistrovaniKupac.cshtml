@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form action="~/RegistrovaniKupac/CreateRegistrovaniKupacKlik" method="post">
+        <h1>Kreiranje kupca</h1><br />
+
+        <label for="RowKey">Id:</label><br />
+        <input type="text" name="RowKey" /><br />
+
+        <label for="popustPrikupovini">Popust:</label><br />
+        <input type="number" step="any" name="popustPrikupovini" /><br />
+
+        <label for="nazivKupca">Ime:</label><br />
+        <input type="text" name="nazivKupca" /><br />
+
+
+        <label for="prezimeKupca">Prezime:</label><br />
+        <input type="text" name="prezimeKupca" /><br />
+
+
+        <input type="submit" value="Kreiraj" />
+
+    </form>
+    <br />
+
+
+    <a href="~/RegistrovaniKupac/ReadRegistrovaniKupac">Nazad</a>
+</body>
+</html>

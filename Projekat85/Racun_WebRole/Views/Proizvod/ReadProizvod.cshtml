@@ -1,0 +1,45 @@
+﻿@using KlaseService_Data
+@model IEnumerable<KlaseService_Data.Proizvod>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h3>Lista svih proizvoda</h3>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Naziv proizvoda</th>
+            <th>Cena proizvoda</th>
+        </tr>
+
+        @foreach (var proizvod in Model)
+        {
+
+
+            <tr>
+                <td>@proizvod.RowKey</td>
+                <td>@proizvod.NazivProizvoda</td>
+                <td>@proizvod.CenaProizvoda</td>
+                <td><a href="~/Proizvod/DeleteProizvod?RowKey=@proizvod.RowKey">Obrisi</a></td>
+                <td><a href="~/Proizvod/UpDateProizvod?id=@proizvod.RowKey">Izmeni</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+
+
+    <a href="~/Proizvod/CreateProizvod">Kreiraj proizvod</a><br />
+    <a href="~/Home/Index">Nazad na pocetak</a>
+
+
+
+</body>
+</html>
